@@ -26,8 +26,8 @@ This code:
 
 ## Important Note
 
-This code uses assign a public to each domain controller. 
-This is NOT recommended for production environments.
-If you planning to use in production environments:
+This code uses assign a public to each domain controller.<br/>
+This is NOT recommended for production environments.<br/>
+If you planning to use in production environments, make the following changes:
 * Remove references to **resource "azurerm_public_ip"** in both VM1 and VM2 files
 * Remove the line **public_ip_address_id = azurerm_public_ip.dcX-eip.id** in **resource "azurerm_network_interface"** for both VM1 and VM2 files. Replace X for 1 or 2.
