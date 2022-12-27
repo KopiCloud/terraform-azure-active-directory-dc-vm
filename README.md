@@ -1,6 +1,8 @@
 # How to Deploy Active Directory (AD) Domain Controller (DC) Virtual Machine (VM) in Azure with Terraform
 [![Terraform](https://img.shields.io/badge/terraform-v1.3+-blue.svg)](https://www.terraform.io/downloads.html)
 
+Blog Post --> https://gmusumeci.medium.com/how-to-deploy-active-directory-ad-domain-controller-dc-virtual-machine-vm-in-azure-with-d816130a96bd
+
 This code:
 
 * Define the Azure Provider
