@@ -27,7 +27,7 @@ resource "azurerm_network_security_rule" "tcp_53_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 53 DNS TCP - DC${count.index+1} Inbound"
+  name                        = "AD_53_DNS_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 53 DNS TCP - DC${count.index+1} Inbound"
   priority                    = (100 + count.index)
   direction                   = "Inbound"
@@ -47,7 +47,7 @@ resource "azurerm_network_security_rule" "udp_53_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 53 DNS UDP - DC${count.index+1} Inbound"
+  name                        = "AD_53_DNS_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 53 DNS UDP - DC${count.index+1} Inbound"
   priority                    = (110 + count.index)
   direction                   = "Inbound"
@@ -67,7 +67,7 @@ resource "azurerm_network_security_rule" "tcp_88_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 88 Kerberos TCP - DC${count.index+1} Inbound"
+  name                        = "AD_88_Kerberos_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 88 Kerberos TCP - DC${count.index+1} Inbound"
   priority                    = (120 + count.index)
   direction                   = "Inbound"
@@ -87,7 +87,7 @@ resource "azurerm_network_security_rule" "udp_88_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 88 Kerberos UDP - DC${count.index+1} Inbound"
+  name                        = "AD_88_Kerberos_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 88 Kerberos UDP - DC${count.index+1} Inbound"
   priority                    = (130 + count.index)
   direction                   = "Inbound"
@@ -107,7 +107,7 @@ resource "azurerm_network_security_rule" "udp_123_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 123 W32Time UDP - DC${count.index+1} Inbound"
+  name                        = "AD_123_W32Time_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 123 W32Time UDP - DC${count.index+1} Inbound"
   priority                    = (140 + count.index)
   direction                   = "Inbound"
@@ -127,7 +127,7 @@ resource "azurerm_network_security_rule" "tcp_135_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 135 RPC TCP - DC${count.index+1} Inbound"
+  name                        = "AD_135_RPC_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 135 RPC TCP - DC${count.index+1} Inbound"
   priority                    = (150 + count.index)
   direction                   = "Inbound"
@@ -147,7 +147,7 @@ resource "azurerm_network_security_rule" "udp_137-138_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 137-138 NetLogon UDP - DC${count.index+1} Inbound"
+  name                        = "AD_137-138_NetLogon_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 137-138 NetLogon UDP - DC${count.index+1} Inbound"
   priority                    = (160 + count.index)
   direction                   = "Inbound"
@@ -167,7 +167,7 @@ resource "azurerm_network_security_rule" "tcp_139_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 139 NetLogon TCP - DC${count.index+1} Inbound"
+  name                        = "AD_139_NetLogon_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 139 NetLogon TCP - DC${count.index+1} Inbound"
   priority                    = (170 + count.index)
   direction                   = "Inbound"
@@ -187,7 +187,7 @@ resource "azurerm_network_security_rule" "tcp_389_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 389 LDAP TCP - DC${count.index+1} Inbound"
+  name                        = "AD_389_LDAP_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 389 LDAP TCP - DC${count.index+1} Inbound"
   priority                    = (180 + count.index)
   direction                   = "Inbound"
@@ -207,7 +207,7 @@ resource "azurerm_network_security_rule" "udp_389_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 389 LDAP UDP - DC${count.index+1} Inbound"
+  name                        = "AD_389_LDAP_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 389 LDAP UDP - DC${count.index+1} Inbound"
   priority                    = (190 + count.index)
   direction                   = "Inbound"
@@ -227,7 +227,7 @@ resource "azurerm_network_security_rule" "tcp_445_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 445 SMB TCP - DC${count.index+1} Inbound"
+  name                        = "AD_445_SMB_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 445 SMB TCP - DC${count.index+1} Inbound"
   priority                    = (200 + count.index)
   direction                   = "Inbound"
@@ -247,7 +247,7 @@ resource "azurerm_network_security_rule" "tcp_464_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 464 Kerberos Authentication TCP - DC${count.index+1} Inbound"
+  name                        = "AD_464_Kerberos_Authentication_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 464 Kerberos Authentication TCP - DC${count.index+1} Inbound"
   priority                    = (210 + count.index)
   direction                   = "Inbound"
@@ -267,7 +267,7 @@ resource "azurerm_network_security_rule" "udp_464_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 464 Kerberos Authentication UDP - DC${count.index+1} Inbound"
+  name                        = "AD_464_Kerberos_Authentication_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 464 Kerberos Authentication UDP - DC${count.index+1} Inbound"
   priority                    = (220 + count.index)
   direction                   = "Inbound"
@@ -287,7 +287,7 @@ resource "azurerm_network_security_rule" "tcp_636_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 636 LDAP SSL TCP - DC${count.index+1} Inbound"
+  name                        = "AD_636_LDAP_SSL_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 636 LDAP SSL TCP - DC${count.index+1} Inbound"
   priority                    = (230 + count.index)
   direction                   = "Inbound"
@@ -307,7 +307,7 @@ resource "azurerm_network_security_rule" "tcp_3268-3269_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 3268-3269 LDAP GC TCP - DC${count.index+1} Inbound"
+  name                        = "AD_3268-3269_LDAP_GC_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 3268-3269 LDAP GC TCP - DC${count.index+1} Inbound"
   priority                    = (240 + count.index)
   direction                   = "Inbound"
@@ -327,7 +327,7 @@ resource "azurerm_network_security_rule" "tcp_49152-65535_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 49152-65535 TCP - DC${count.index+1} Inbound"
+  name                        = "AD_49152-65535_TCP_DC${count.index+1}_Inbound"
   description                 = "AD 49152-65535 TCP - DC${count.index+1} Inbound"
   priority                    = (250 + count.index)
   direction                   = "Inbound"
@@ -347,7 +347,7 @@ resource "azurerm_network_security_rule" "udp_49152-65535_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 49152-65535 UDP - DC${count.index+1} Inbound"
+  name                        = "AD_49152-65535_UDP_DC${count.index+1}_Inbound"
   description                 = "AD 49152-65535 UDP - DC${count.index+1} Inbound"
   priority                    = (260 + count.index)
   direction                   = "Inbound"
@@ -367,7 +367,7 @@ resource "azurerm_network_security_rule" "icmp_dc_inbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD Ping to DC${count.index+1} Inbound"
+  name                        = "AD_Ping_to_DC${count.index+1}_Inbound"
   description                 = "AD Ping to DC${count.index+1} Inbound"
   priority                    = (270 + count.index)
   direction                   = "Inbound"
@@ -391,7 +391,7 @@ resource "azurerm_network_security_rule" "tcp_53_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 53 DNS TCP - DC${count.index+1} Outbound"
+  name                        = "AD_53_DNS_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 53 DNS TCP - DC${count.index+1} Outbound"
   priority                    = (100 + count.index)
   direction                   = "Outbound"
@@ -411,7 +411,7 @@ resource "azurerm_network_security_rule" "udp_53_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 53 DNS UDP - DC${count.index+1} Outbound"
+  name                        = "AD_53_DNS_UDP_DC${count.index+1}_Outbound"
   description                 = "AD 53 DNS UDP - DC${count.index+1} Outbound"
   priority                    = (110 + count.index)
   direction                   = "Outbound"
@@ -431,7 +431,7 @@ resource "azurerm_network_security_rule" "tcp_88_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 88 Kerberos TCP - DC${count.index+1} Outbound"
+  name                        = "AD_88_Kerberos_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 88 Kerberos TCP - DC${count.index+1} Outbound"
   priority                    = (120 + count.index)
   direction                   = "Outbound"
@@ -451,7 +451,7 @@ resource "azurerm_network_security_rule" "udp_88_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 88 Kerberos UDP - DC${count.index+1} Outbound"
+  name                        = "AD_88_Kerberos_UDP_DC${count.index+1}_Outbound"
   description                 = "AD 88 Kerberos UDP - DC${count.index+1} Outbound"
   priority                    = (130 + count.index)
   direction                   = "Outbound"
@@ -471,7 +471,7 @@ resource "azurerm_network_security_rule" "udp_123_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 123 W32Time UDP - DC${count.index+1} Outbound"
+  name                        = "AD_123_W32Time_UDP_DC${count.index+1}_Outbound"
   description                 = "AD 123 W32Time UDP - DC${count.index+1} Outbound"
   priority                    = (140 + count.index)
   direction                   = "Outbound"
@@ -491,7 +491,7 @@ resource "azurerm_network_security_rule" "tcp_135_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 135 RPC TCP - DC${count.index+1} Outbound"
+  name                        = "AD_135_RPC_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 135 RPC TCP - DC${count.index+1} Outbound"
   priority                    = (150 + count.index)
   direction                   = "Outbound"
@@ -511,7 +511,7 @@ resource "azurerm_network_security_rule" "udp_137-138_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 137-138 NetLogon UDP - DC${count.index+1} Outbound"
+  name                        = "AD_137-138_NetLogon_UDP_DC${count.index+1}_Outbound"
   description                 = "AD 137-138 NetLogon UDP - DC${count.index+1} Outbound"
   priority                    = (160 + count.index)
   direction                   = "Outbound"
@@ -531,7 +531,7 @@ resource "azurerm_network_security_rule" "tcp_139_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 139 NetLogon TCP - DC${count.index+1} Outbound"
+  name                        = "AD_139_NetLogon_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 139 NetLogon TCP - DC${count.index+1} Outbound"
   priority                    = (170 + count.index)
   direction                   = "Outbound"
@@ -551,7 +551,7 @@ resource "azurerm_network_security_rule" "tcp_389_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 389 LDAP TCP - DC${count.index+1} Outbound"
+  name                        = "AD_389_LDAP_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 389 LDAP TCP - DC${count.index+1} Outbound"
   priority                    = (180 + count.index)
   direction                   = "Outbound"
@@ -571,7 +571,7 @@ resource "azurerm_network_security_rule" "udp_389_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 389 LDAP UDP - DC${count.index+1} Outbound"
+  name                        = "AD_389_LDAP_UDP_DC${count.index+1}_Outbound"
   description                 = "AD 389 LDAP UDP - DC${count.index+1} Outbound"
   priority                    = (190 + count.index)
   direction                   = "Outbound"
@@ -591,7 +591,7 @@ resource "azurerm_network_security_rule" "tcp_445_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 445 SMB TCP - DC${count.index+1} Outbound"
+  name                        = "AD_445_SMB_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 445 SMB TCP - DC${count.index+1} Outbound"
   priority                    = (200 + count.index)
   direction                   = "Outbound"
@@ -611,7 +611,7 @@ resource "azurerm_network_security_rule" "tcp_464_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 464 Kerberos Authentication TCP - DC${count.index+1} Outbound"
+  name                        = "AD_464_Kerberos_Authentication_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 464 Kerberos Authentication TCP - DC${count.index+1} Outbound"
   priority                    = (210 + count.index)
   direction                   = "Outbound"
@@ -631,7 +631,7 @@ resource "azurerm_network_security_rule" "udp_464_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 464 Kerberos Authentication UDP - DC${count.index+1} Outbound"
+  name                        = "AD_464_Kerberos_Authentication_UDP_DC${count.index+1}_Outbound"
   description                 = "AD 464 Kerberos Authentication UDP - DC${count.index+1} Outbound"
   priority                    = (220 + count.index)
   direction                   = "Outbound"
@@ -651,7 +651,7 @@ resource "azurerm_network_security_rule" "tcp_636_dc_outbound" {
 
   network_security_group_name = azurerm_network_security_group.active-directory-dc-nsg.name
   resource_group_name         = azurerm_resource_group.network-rg.name
-  name                        = "AD 636 LDAP SSL TCP - DC${count.index+1} Outbound"
+  name                        = "AD_636_LDAP_SSL_TCP_DC${count.index+1}_Outbound"
   description                 = "AD 636 LDAP SSL TCP - DC${count.index+1} Outbound"
   priority                    = (230 + count.index)
   direction                   = "Outbound"
